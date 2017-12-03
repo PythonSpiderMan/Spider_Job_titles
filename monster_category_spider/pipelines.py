@@ -9,3 +9,6 @@
 class MonsterCategorySpiderPipeline(object):
     def process_item(self, item, spider):
         return item
+
+    def close_spider(self, spider):
+        spider.driver.close()

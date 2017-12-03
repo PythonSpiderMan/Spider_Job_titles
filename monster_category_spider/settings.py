@@ -14,6 +14,7 @@ BOT_NAME = 'monster_category_spider'
 SPIDER_MODULES = ['monster_category_spider.spiders']
 NEWSPIDER_MODULE = 'monster_category_spider.spiders'
 
+SELENIUM_GRID_HUB_ADDR = "http://your_ip_address:3000/wd/hub"
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'monster_category_spider (+http://www.yourdomain.com)'
@@ -64,9 +65,9 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'monster_category_spider.pipelines.MonsterCategorySpiderPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'monster_category_spider.pipelines.MonsterCategorySpiderPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
